@@ -1,37 +1,57 @@
-.content
-  .header
-    .header-left
-      .title-main
-        LAZY-WEAR
-    .header-right
-      .header-right__signup
-        = link_to '' do
-          signup
-      .header-right__login
-        = link_to '' do
-          login
-      .g-nav
-        %ul.g-nav__menu
-          %li
-            = link_to '', class: "g-nav__menu__item" do
-              マイページ
-          %li
-            = link_to '', class: "g-nav__menu__item" do
-              登録する
-          %li
-            = link_to '', class: "g-nav__menu__item" do
-              フォロー/フォロワー
-          %li
-            = link_to '', class: "g-nav__menu__item" do
-              ログアウト
-          %li
-            = link_to '', class: "g-nav__menu__item" do
-              LazyWearとは
-      .sp-menu 
-        = link_to '', class: "menu-trigger", onclick: "return false" do
-          %span
-          %span
-          %span
-  .sub-title
-  %p毎日の、洋服選びをシンプルに。
-  .content-main
+.header
+  .header__left
+    .header__left__sub-title
+      毎日の、洋服選びをシンプルに。
+    .header__left__main-title
+      LAZY-WEAR
+  .header__right
+    .header__right__search-form
+      = form_with url: '', method: :'', local: true ,html: {class: "search-item"} do |f|
+        = f.text_field :keyword, class: 'search-field', placeholder: 'キーワードから探す'
+        = f.submit
+    .header__right__signup
+      = link_to '' do
+        signup
+    .header__right__login
+      = link_to '' do
+        login
+    .g-nav
+      %ul.g-nav__menu
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            マイページ
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            登録する
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            フォロー/フォロワー
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            ログアウト
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            LazyWearとは
+    .sp-menu 
+      = link_to '', class: "menu-trigger", onclick: "return false" do
+        %span
+        %span
+        %span
+.main
+  .main__content
+    あなたの洋服を登録しましょう！
+    = button_tag '', class: "btn-new" do
+      登録する!
+  .main__content__image
+  .main__items
+    登録したアイテム一覧
+    .main__items__images
+      商品A
+  .main__follower
+    フォロワーの登録商品
+    .main__follower__images
+      Aさん
+    .main__follower__images
+      Bさん
+.footer
+  フッターです
