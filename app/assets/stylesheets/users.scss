@@ -130,9 +130,7 @@ box-sizing: border-box;
             top: 25px;
         }
     }
-            // activeというクラスをつける
     &.active{
-            // クリックした際のcssアニメーション
         span{
             &:nth-of-type(1){
                 -webkit-transform: translateY(10px) rotate(45deg);
@@ -206,20 +204,39 @@ animation: circle .7s .1s forwards;
 .main{
   min-height: 300px;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 110px;
   &__content{
     background-color: #fff;
     width: 50%;
     float: right;
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    .btn-new{
+      margin-top: 100px;
+      max-width: 360px;
+      width: 100%;
+      background-color: #f65151;
+      color: #fff;
+      padding: 20px 0;
+      font-size: 20px;
+      border-radius: 999em;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
     
   }
   &__content__image{
     background-image: image-url("original.jpg");
-    background-size: 700px 500px;
+    background-size: 700px 600px;
     width: 50%;
-    height: 500px;
+    height: 600px;
+    opacity: 0.8;
   }
   &__items{
     background-color: #ffad5b;
