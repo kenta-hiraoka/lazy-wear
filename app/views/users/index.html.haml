@@ -42,7 +42,7 @@
     %p LAZY-WEARは、
     %p あなたの登録した洋服をランダムにチョイスして、
     %p 毎日の洋服選びをお手伝いします！
-    = button_tag '', class: "btn-new" do
+    = link_to items_path, class: "btn-new" do
       アイテムを登録する!
   .main__content__image
   .main__items
@@ -56,4 +56,4 @@
     .main__follower__images
       Bさん
 .footer
-  フッターです
+  Copyrights© LAZY-WEAR All Rights Reserved.
