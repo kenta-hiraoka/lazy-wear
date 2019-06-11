@@ -1,3 +1,310 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.is-left{
+  float: left;
+}
+
+.is-right{
+  float:right
+}
+.is-btn-default{
+display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+.is-btn-red{
+background: #ea352d;
+border: 1px solid #ea352d;
+color: #fff;
+}
+.is-btn-gray{
+background: #aaa;
+border: 1px solid #aaa;
+color: #fff;
+}
+.is-bold{
+font-size: 16px;
+font-weight: bold;
+}
+.is-content{
+
+.is-main{
+  display: block;
+  .is-section{
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    display: block;
+    .is-m-header{
+      padding: 32px 16px;
+      font-size: 22px;
+      line-height: 1.5;
+      text-align: center;
+      font-weight: bold;
+    }
+    .is-form{
+      border-top: 1px solid #f5f5f5;
+      .is-upload-box{
+        width: 620px;
+        padding: 40px;
+        box-sizing:border-box;
+        &__head{
+          font-size: 16px;
+          display: flex;
+          &--text{
+            font-weight: bold;
+          }
+          &--red{
+         background: #ea352d;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: top;
+        }
+          &-p{
+            margin: 8px 0 0;
+            line-height: 1.5;
+            font-size: 13px;
+          }
+      }
+      .is-upload-box-container{
+        display: block;
+        width: 620px;
+        margin: 16px auto 0;
+        .is-add-image{
+          display: inline;
+          .is-image-ul{
+            display: inline;
+            float: left;
+            .is-image-li:first-of-type{
+              margin-left: 0;
+            }
+            .is-image-li:nth-of-type(6){
+              margin-left: 0;
+            }
+            .is-image-li{
+              margin-left: 0;
+              width: 116px;
+              margin: 0 0 10px 7px;
+              position: relative;
+              display: inline-block;
+              border: 1px solid #eee;
+              vertical-align: top;
+              img{
+                 width: 100%;
+                height: auto;
+              }
+              &__figure{
+                line-height: 116px;
+                width: auto;
+                padding: 0;
+                height: 116px;
+                position: relative;
+                overflow: hidden;
+                background: #f5f5f5;
+                margin: 0;
+              }
+              &__under{
+                font-size: 14px;
+                display: flex;
+                &--e{
+                  display: inline-block;
+                  width: 50%;
+                  background: #f5f5f5;
+                  line-height: 44px;
+                  text-align: center;
+                  color: #0099e8;
+                  text-decoration: none;
+                }
+              }
+             }
+            }
+          }
+        &__box{
+          width: 100%;
+           margin-left: 0;
+           float: right;
+           padding: 40px;
+           position: relative;
+          min-height: 162px;
+          background: #f5f5f5;
+          border: 1px dashed #ccc;
+          font-size: 0;
+          text-align: center;
+          transition: box-shadow ease-out .3s, -webkit-box-shadow ease-out .3s;
+          cursor: pointer;
+          box-sizing:border-box;
+          &--file{
+            display: none;
+          }
+          &--text{
+           position: absolute;
+          top: 50%;
+          left: 16px;
+          right: 16px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 1.5;
+          transform: translate(0, -50%);
+          pointer-events: none;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+          }
+        }
+          .is-item-1{
+            width: 470px;
+            margin-left: 2%;
+          }
+          .is-item-2{
+            width: 350px;
+            margin-left: 2%;
+          }
+          .is-item-3{
+            width: 220px;
+            margin-left: 2%;
+          }
+          .is-item-4{
+            width: 90px;
+            margin-left: 2%;
+          }
+           .is-item-5{
+            width: 100%;
+            margin-left: 2%;
+          }
+      }
+    }
+  }
+  .is-sell-content{
+    padding: 40px;
+    border-top: 1px solid #eee;
+    &__p{
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    &__btn-under{
+      width: 45%;
+      margin: 24px auto 0;
+    }
+    &__btn{
+      margin: 40px 0 0;
+    }
+    .is-sell-sub-head{
+      float: left;
+      color: #888;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .is-sell-form-box{
+      float: right;
+      width: 400px;
+      margin: 0;
+      .is-sell-price{
+          &__input{
+          width: 50%;
+          text-align: right;
+            &--text{
+              margin: 0;
+              text-align: right;
+            }
+          }
+          &__li{
+            padding: 24px 0;
+            border-top: 1px solid #ccc;
+            box-sizing:border-box;
+            &--small{
+              font-size: 14px;
+            }
+            &--large{
+              font-size: 34px;
+              font-weight: bold;
+            }
+          }
+          &__li:first-of-type{
+                padding: 0 0 24px;
+                border: 0;
+          }
+        }
+      }
+    .is-form-group{
+          margin: 40px 0 0;
+        .is-select-wrap{
+          margin: 8px 0 0;
+          position: relative;
+          background: #fff;
+          }
+        &__hiden{
+          display: none;
+        }
+        &__select{
+          width: 100%;
+          position: relative;
+          z-index: 2;
+          height: 48px;
+          padding: 0 16px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: 0;
+          font-size: 16px;
+          line-height: 1.5;
+          cursor: pointer;
+        }
+        &__label{
+          font-weight: 600;
+          display: inline-block;
+        }
+        &__label-hiden{
+          font-weight: 600;
+          display: none;
+        }
+        &__span{
+          background: #ea352d;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: top;
+        }
+        &__field{
+          width: 100%;
+          margin: 8px 0 0;
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+          box-sizing:border-box;
+          }
+        &__area{
+          margin: 8px 0 0;
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          min-height: 104px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 16px;
+          line-height: 1.5;
+          box-sizing:border-box;
+        }
+        }
+    }
+    .is-form-group:first-of-type{
+            margin:0;
+      }
+  }
+}
+}
