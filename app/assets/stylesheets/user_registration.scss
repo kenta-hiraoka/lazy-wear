@@ -1,10 +1,12 @@
 .devise-default{
   width: 100%;
-  background-color: #ffd5aa;
+  background-image: image-url('original.jpg');
+  background-size: 100%;
 }
 .ur-main{
   display: block;
   overflow: scroll;
+  background-color: rgba(255, 213, 170, 0.8);
 }
 .ur-form{
   margin: 150px auto;
@@ -15,7 +17,8 @@
   &__title{
     font-weight: 600;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
+    font-family:'Bangers', cursive;
   }
   &__content{
     border-top: 2px solid #333;
