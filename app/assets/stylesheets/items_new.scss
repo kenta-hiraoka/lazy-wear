@@ -1,46 +1,13 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.is-left{
-  float: left;
-}
-
-.is-right{
-  float:right
-}
-.is-btn-default{
-display: block;
-  width: 100%;
-  line-height: 48px;
-  font-size: 14px;
-  border: 1px solid transparent;
-  -webkit-transition: all ease-out .3s;
-  transition: all ease-out .3s;
-  cursor: pointer;
-  text-align: center;
-}
-.is-btn-red{
-background: #ea352d;
-border: 1px solid #ea352d;
-color: #fff;
-}
-.is-btn-gray{
-background: #aaa;
-border: 1px solid #aaa;
-color: #fff;
-}
-.is-bold{
-font-size: 16px;
-font-weight: bold;
-}
 .is-content{
-
+  margin: 100px auto;
+  background-color: #ffd5aa;
+  overflow: scroll;
 .is-main{
   display: block;
+  overflow: scroll;
   .is-section{
     width: 700px;
-    margin: 0 auto;
+    margin: 50px auto;
     background: #fff;
     display: block;
     .is-m-header{
@@ -85,7 +52,6 @@ font-weight: bold;
           display: inline;
           .is-image-ul{
             display: inline;
-            float: left;
             .is-image-li:first-of-type{
               margin-left: 0;
             }

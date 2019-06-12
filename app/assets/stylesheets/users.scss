@@ -213,11 +213,27 @@ animation: circle .7s .1s forwards;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-    .btn-new{
+    .btn-items-new{
       margin-top: 100px;
       max-width: 360px;
       width: 100%;
       background-color: #f65151;
+      color: #fff;
+      padding: 20px 0;
+      font-size: 20px;
+      border-radius: 999em;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn-users-new{
+      margin-top: 50px;
+      max-width: 300px;
+      width: 100%;
+      background-color: #4169e1;
       color: #fff;
       padding: 20px 0;
       font-size: 20px;

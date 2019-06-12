@@ -1,0 +1,33 @@
+.header
+  .header__left
+    .header__left__sub-title
+      毎日の、洋服選びをシンプルに。
+    .header__left__main-title
+      LAZY-WEAR
+  .header__right
+    .header__right__search-form
+      = form_with url: '', method: :'', local: true ,html: {class: "search-item"} do |f|
+        = f.text_field :keyword, class: 'search-field', placeholder: 'キーワードから探す'
+        = f.submit
+    .g-nav
+      %ul.g-nav__menu
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            マイページ
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            登録する
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            フォロー/フォロワー
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            ログアウト
+        %li
+          = link_to '', class: "g-nav__menu__item" do
+            LazyWearとは
+    .sp-menu 
+      = link_to '', class: "menu-trigger", onclick: "return false" do
+        %span
+        %span
+        %span
