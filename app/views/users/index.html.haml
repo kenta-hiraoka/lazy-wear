@@ -1,49 +1,15 @@
-.header
-  .header__left
-    .header__left__sub-title
-      毎日の、洋服選びをシンプルに。
-    .header__left__main-title
-      LAZY-WEAR
-  .header__right
-    .header__right__search-form
-      = form_with url: '', method: :'', local: true ,html: {class: "search-item"} do |f|
-        = f.text_field :keyword, class: 'search-field', placeholder: 'キーワードから探す'
-        = f.submit
-    .header__right__signup
-      = link_to '' do
-        signup
-    .header__right__login
-      = link_to '' do
-        login
-    .g-nav
-      %ul.g-nav__menu
-        %li
-          = link_to '', class: "g-nav__menu__item" do
-            マイページ
-        %li
-          = link_to '', class: "g-nav__menu__item" do
-            登録する
-        %li
-          = link_to '', class: "g-nav__menu__item" do
-            フォロー/フォロワー
-        %li
-          = link_to '', class: "g-nav__menu__item" do
-            ログアウト
-        %li
-          = link_to '', class: "g-nav__menu__item" do
-            LazyWearとは
-    .sp-menu 
-      = link_to '', class: "menu-trigger", onclick: "return false" do
-        %span
-        %span
-        %span
+= render 'header'
 .main
   .main__content
     %p LAZY-WEARは、
     %p あなたの登録した洋服をランダムにチョイスして、
     %p 毎日の洋服選びをお手伝いします！
-    = link_to items_path, class: "btn-new" do
+    .main__content__btn
+    = link_to items_path, class: "btn-items-new" do
       アイテムを登録する!
+    .main__content__btn
+    = link_to '', class: "btn-users-new" do
+      ログイン/新規登録
   .main__content__image
   .main__items
     登録したアイテム一覧
@@ -55,5 +21,3 @@
       Aさん
     .main__follower__images
       Bさん
-.footer
-  Copyrights© LAZY-WEAR All Rights Reserved.
