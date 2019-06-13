@@ -7,9 +7,9 @@
         = form_with model: @item_form, url: items_path do |f|
           .is-upload-box
             .is-upload-box__head
-              %h3.is-upload-box__head--text 出品画像
+              %h3.is-upload-box__head--text 登録画像
               %span.is-upload-box__head--red 必須
-            %p.is-upload-box__head-p 最大10枚までアップロードできます
+            %p.is-upload-box__head-p 最大5枚までアップロードできます
             .is-upload-box-container.clearfix
               .is-add-image
                 .is-image-ul.item-0
@@ -40,29 +40,32 @@
                 %li.is-error-message__li
                   = @errors[:description][0]if @errors && @errors[:description][0]
           .is-sell-content.clearfix
-            %h3.is-sell-sub-head 商品の詳細
+            %h3.is-sell-sub-head アイテムの詳細
             .is-sell-form-box
               .is-form-group
                 = f.label :category_id ,:カテゴリー,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
-                  -# = f.select :category_id,Category.all.map{|k| [k.name, k.id]}, {include_blank: true}, {class: "is-form-group__select"}
+                  = f.select :category_id,Category.all.map{|k| [k.name, k.id]}, {include_blank: true}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
                     = @errors[:category_id][0] if @errors && @errors[:category_id][0]
               .is-form-group
-                = f.label :brand_id ,:ブランド,class: "is-form-group__label"
+                = f.label :brand_id ,:詳細,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
-                  -# = f.select :brand_id,Brand.all.map{|k| [k.name, k.id]}, {include_blank: true}, {class: "is-form-group__select"}
+                  = f.select :middle_category_id,MiddleCategory.all.map{|k| [k.name, k.id]}, {include_blank: true}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
                     = @errors[:brand_id][0] if @errors && @errors[:brand_id][0]
               .is-form-group
-                = f.label :status ,:商品の状態,class: "is-form-group__label"
+                = f.label :status ,:雰囲気,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
                   -# = f.select :status,Item.statuses.keys.map {|k| [t("enums.item.status.#{k}"), k]},{include_blank: true}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
                     = @errors[:status][0] if @errors && @errors[:status][0]
+          .is-sell-content
+            = f.submit "登録する",class: "is-btn-default is-btn-red is-sell-content__btn"
+            = link_to "もどる", root_path,class: "is-btn-default is-btn-gray is-sell-content__btn-under"
