@@ -1,0 +1,10 @@
+ja:
+  enums:
+    item:
+      status:
+        formal: きれい目
+        formal_casual: きれい目/カジュアル
+        casual: カジュアル
+        casual_relux: カジュアル/リラックス
+        relux: リラックス
+        all: 全て

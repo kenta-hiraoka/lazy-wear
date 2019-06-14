@@ -14,7 +14,7 @@
 }
 
 .is-content{
-  margin: 100px auto;
+  margin: 100px auto 0;
   background-color: #ffd5aa;
   overflow: scroll;
 .is-main{
@@ -67,6 +67,7 @@
           display: inline;
           .is-image-ul{
             display: inline;
+            float: left;
             .is-image-li:first-of-type{
               margin-left: 0;
             }
