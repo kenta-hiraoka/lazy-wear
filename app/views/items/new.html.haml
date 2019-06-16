@@ -62,7 +62,7 @@
                 = f.label :status ,:雰囲気,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
-                  -# = f.select :status,Item.statuses.keys.map {|k| [t("enums.item.status.#{k}"), k]},{include_blank: true}, {class: "is-form-group__select"}
+                -# = f.select :feeling,Item.feelings.keys.map {|k| [t("enums.item.feeling.#{k}"), k]},{include_blank: true}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
                     = @errors[:status][0] if @errors && @errors[:status][0]

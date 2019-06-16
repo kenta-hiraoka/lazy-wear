@@ -1,7 +1,7 @@
 ja:
   enums:
     item:
-      status:
+      feeling:
         formal: きれい目
         formal_casual: きれい目/カジュアル
         casual: カジュアル
