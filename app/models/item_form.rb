@@ -1,0 +1,3 @@
+class ItemForm < ApplicationRecord
+
+end

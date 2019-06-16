@@ -33,9 +33,9 @@
                 %li.is-error-message__li
                   = @errors[:name][0] if @errors && @errors[:name][0]
             .is-form-group
-              = f.label :description ,:商品の説明,class: "is-form-group__label"
+              = f.label :text ,:商品の説明, class: "is-form-group__label"
               %span.is-form-group__span 必須
-              = f.text_area :description,row: 5,placeholder: "商品の説明（必須 1,000文字以内）", class: "is-form-group__area"
+              = f.text_area :text,row: 5,placeholder: "商品の説明（必須 1,000文字以内）", class: "is-form-group__area"
               %ul.is-error-message
                 %li.is-error-message__li
                   = @errors[:description][0]if @errors && @errors[:description][0]
@@ -46,23 +46,23 @@
                 = f.label :category_id ,:カテゴリー,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
-                  = f.select :category_id,Category.all.map{|k| [k.name, k.id]}, {include_blank: true}, {class: "is-form-group__select"}
+                  = f.select :category_id,Category.all.map{|k| [k.name, k.id]}, {prompt: "--洋服のカテゴリを選択--"}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
                     = @errors[:category_id][0] if @errors && @errors[:category_id][0]
               .is-form-group
-                = f.label :brand_id ,:詳細,class: "is-form-group__label"
+                = f.label :middle_category_id ,:詳細,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
-                  = f.select :middle_category_id,MiddleCategory.all.map{|k| [k.name, k.id]}, {include_blank: true}, {class: "is-form-group__select"}
+                  = f.select :middle_category_id,MiddleCategory.all.map{|k| [k.name, k.id]}, {prompt: "--洋服の型を選択--"}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
-                    = @errors[:brand_id][0] if @errors && @errors[:brand_id][0]
+                    = @errors[:middle_category_id][0] if @errors && @errors[:middle_category_id][0]
               .is-form-group
-                = f.label :status ,:雰囲気,class: "is-form-group__label"
+                = f.label :feeling ,:雰囲気,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
-                -# = f.select :feeling,Item.feelings.keys.map {|k| [t("enums.item.feeling.#{k}"), k]},{include_blank: true}, {class: "is-form-group__select"}
+                = f.select :feeling,Item.feelings.keys.map {|k| [t("enums.item.feeling.#{k}"), k]},{prompt: "--どんな気分の時に着たい？--"}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
                     = @errors[:status][0] if @errors && @errors[:status][0]
