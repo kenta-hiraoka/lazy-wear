@@ -62,10 +62,10 @@
                 = f.label :feeling ,:雰囲気,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
-                = f.select :feeling,Item.feelings.keys.map {|k| [t("enums.item.feeling.#{k}"), k]},{prompt: "--どんな気分の時に着たい？--"}, {class: "is-form-group__select"}
+                  = f.select :feeling,Item.feelings.keys.map {|k| [t("enums.item.feeling.#{k}"), k]},{prompt: "--どんな気分の時に着たい？--"}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
-                    = @errors[:status][0] if @errors && @errors[:status][0]
+                    = @errors[:feeling][0] if @errors && @errors[:feeling][0]
           .is-sell-content
             = f.submit "登録する",class: "is-btn-default is-btn-red is-sell-content__btn"
             = link_to "もどる", root_path,class: "is-btn-default is-btn-gray is-sell-content__btn-under"
