@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'users#index'
   get 'users', to: 'users#index'
   get 'items/new', to: 'items#new'
+  get 'users/mypage', to: 'users#mypage'
 end
