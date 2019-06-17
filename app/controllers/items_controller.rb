@@ -1,9 +1,10 @@
 class ItemsController < ApplicationController
+
   def index
   end
 
   def new
-    @item_form = ItemForm.new
+      @item_form = ItemForm.new
   end
 
   def create
@@ -19,11 +20,13 @@ class ItemsController < ApplicationController
   def show
   end
 
-<<<<<<< Updated upstream
   def upload
   end
 
   def edit
+  end
+
+  def upload
   end
 
 
