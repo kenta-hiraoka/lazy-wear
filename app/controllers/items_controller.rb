@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
   def create
     @item_form = ItemForm.new(item_params)
     if @item_form.save
-        # redirect_to root_path
+        redirect_to root_path
       else
         @errors = @item_form.errors
         render :new
@@ -19,11 +19,14 @@ class ItemsController < ApplicationController
   def show
   end
 
+<<<<<<< Updated upstream
   def upload
   end
 
   def edit
   end
+
+
 
   def destroy
   end
@@ -35,6 +38,7 @@ class ItemsController < ApplicationController
       :name,
       :text,
       :category_id,
+      :middle_category_id,
       :feeling,
        {:remove_images => []},
        { :images => [] }

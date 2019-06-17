@@ -1,0 +1,23 @@
+= render 'header'
+.main
+  .main__content
+    %p こんにちは、@user.nameさん
+    %p あなたの登録した洋服をランダムにチョイスして、
+    %p 毎日の洋服選びをお手伝いします！
+    .main__content__btn
+    = link_to items_path, class: "btn-items-new" do
+      アイテムを登録する!
+    .main__content__btn
+    = link_to '', class: "btn-users-new" do
+      アイテムをチョイスする！
+  .main__content__image
+  .main__items
+    登録したアイテム一覧
+    .main__items__images
+      商品A
+  .main__follower
+    フォロワーの登録商品
+    .main__follower__images
+      Aさん
+    .main__follower__images
+      Bさん

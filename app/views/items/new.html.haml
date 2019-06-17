@@ -20,7 +20,7 @@
               = f.label :images ,class: "is-upload-box-container__box" ,id: "is-add",for: "is-img-0" do
                 .is-add-up
                   = f.file_field :images,id: "is-img-0",multiple: true,data: {id: 0},class: "is-upload-box-container__box--file is-up-img"
-                  %pre.is-upload-box-container__box--text ドラッグアンドドロップまたはクリックしてファイルをアップロード
+                  %pre.is-upload-box-container__box--text クリックしてファイルをアップロード
               %ul.is-error-message
                 %li.is-error-message__li
                   = @errors[:images][0] if @errors && @errors[:images][0]
@@ -33,9 +33,9 @@
                 %li.is-error-message__li
                   = @errors[:name][0] if @errors && @errors[:name][0]
             .is-form-group
-              = f.label :text ,:商品の説明, class: "is-form-group__label"
+              = f.label :text ,:アイテムの説明, class: "is-form-group__label"
               %span.is-form-group__span 必須
-              = f.text_area :text,row: 5,placeholder: "商品の説明（必須 1,000文字以内）", class: "is-form-group__area"
+              = f.text_area :text,row: 5,placeholder: "アイテムの説明（必須 1,000文字以内）", class: "is-form-group__area"
               %ul.is-error-message
                 %li.is-error-message__li
                   = @errors[:description][0]if @errors && @errors[:description][0]
@@ -51,10 +51,10 @@
                   %li.is-error-message__li
                     = @errors[:category_id][0] if @errors && @errors[:category_id][0]
               .is-form-group
-                = f.label :middle_category_id ,:詳細,class: "is-form-group__label"
+                = f.label :middle_category_id, :詳細,class: "is-form-group__label"
                 %span.is-form-group__span 必須
                 .is-select-wrap
-                  = f.select :middle_category_id,MiddleCategory.all.map{|k| [k.name, k.id]}, {prompt: "--洋服の型を選択--"}, {class: "is-form-group__select"}
+                  = f.select :middle_category_id, MiddleCategory.all.map{|k| [k.name, k.id]}, {prompt: "--洋服の型を選択--"}, {class: "is-form-group__select"}
                 %ul.is-error-message
                   %li.is-error-message__li
                     = @errors[:middle_category_id][0] if @errors && @errors[:middle_category_id][0]
